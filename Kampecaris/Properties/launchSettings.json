@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Kampecaris": {
+      "commandName": "Project"
+    },
+    "Rhino 8": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\Rhino 8\\System\\Rhino.exe"
+    }
+  }
+}
