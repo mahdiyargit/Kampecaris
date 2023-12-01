@@ -77,6 +77,7 @@ public sealed class MarchingCubes : ComponentWithPins
         var joined = new Mesh();
         joined.Append(method == 0 ? MarchingCube(x, y, z, values, pts, iso, tol) : MarchingTetrahedra(x, y, z, values, pts, iso, tol));
         joined.Vertices.CombineIdentical(true, true);
+        joined.Faces.CullDegenerateFaces();
         if (computeNormal)
         {
             var gf = new GradientField(field, tolerance);
