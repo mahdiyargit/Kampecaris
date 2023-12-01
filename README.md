@@ -1,7 +1,7 @@
 ![KampecarisLogo](https://github.com/mahdiyargit/Kampecaris/assets/15168602/7c6621d8-0943-47a8-8268-c6e2162ac4ee)
 
 # Installation
-1.	Begin by downloading the **Kampecaris.rhp** file from the [release page]([url](https://github.com/mahdiyargit/Kampecaris/releases/)https://github.com/mahdiyargit/Kampecaris/releases/).
+1.	Begin by downloading the **Kampecaris.rhp** file from the ([release page](https://github.com/mahdiyargit/Kampecaris/releases/tag/v1.0.0-alpha))
 2.	Once downloaded, ensure that the file is unblocked.
 
   	  ![Unblock](https://github.com/mahdiyargit/Kampecaris/assets/15168602/da26e6f1-3cdf-44e3-bb4d-5ea8ebb161ad)
