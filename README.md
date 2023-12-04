@@ -15,3 +15,7 @@
   	  ![PluginProperties](https://github.com/mahdiyargit/Kampecaris/assets/15168602/1e3422c6-1a72-4388-8fd0-8d3b5e499208)
 
 5.	Navigate to the **Components** folder within the installation directory and paste the **Kampecaris.rhp** file into this folder.
+
+# Participants:
+Mehrnoush Nabizadeh, Mohmmad Ali Khafaji, Azita Partovi, Amirreza Masaeli, Sarvnaz Rahimi Danesh, Hosein Nasiri, Fatemeh Mohammadian Dastjerdi, Koosha Abdolahifar, Nadia Ashrafi, Mohammad Pourfouladi, Niloofar Shoaebargh, Masood Heydarpour, Zahra Shirzadnia, Amir Ahad Sanei, Katayoon Moslemi, Taha Ghasemi, Atoosa Sarrafi, Matin Kabiri, Sogand Malekloo, Alireza Bahrami,
+Setareh Nikfar, Zahra Farahani, Mohammad Savei, Arezo Moslehi, Elham Ghaderi
