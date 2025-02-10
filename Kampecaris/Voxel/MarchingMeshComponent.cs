@@ -7,17 +7,15 @@ using Grasshopper.UI;
 using GrasshopperIO;
 using Rhino.Geometry;
 using System.Collections.Concurrent;
-using Grasshopper.UI.Icon;
-using Kampecaris.Properties;
 
 namespace Kampecaris.Voxel;
 [IoId("DBF481C5-CFC5-4066-9B9A-47FDFAD90A83")]
-public sealed class MarchingMesh : ComponentWithPins
+public sealed class MarchingMeshComponent : Component, IPinCushion
 {
-    public MarchingMesh() : base(new Nomen("Marching Mesh", "Marching on a Mesh", "Kampecaris", "Voxel"))
+    public MarchingMeshComponent() : base(new Nomen("Marching Mesh", "Marching on a Mesh", "Kampecaris", "Voxel"))
     {
     }
-    public MarchingMesh(IReader reader) : base(reader) { }
+    public MarchingMeshComponent(IReader reader) : base(reader) { }
     protected override void AddInputs(InputAdder inputs)
     {
         inputs.AddMesh("Mesh", "Ms", "Mesh to march").Set(Mesh.CreateFromPlane(Plane.WorldXY, new Interval(-10, 10), new Interval(-10, 10), 50, 50));
@@ -26,8 +24,7 @@ public sealed class MarchingMesh : ComponentWithPins
     }
     protected override void AddOutputs(OutputAdder outputs) =>
         outputs.AddPolyline("Isocurves", "Ic", "Isocurves", Access.Twig);
-    protected override IIcon IconInternal => AbstractIcon.FromStream(new MemoryStream(Resources.MarchingMesh));
-    public override IEnumerable<Guid> SupportedPins
+    public IEnumerable<Guid> SupportedPins
     {
         get
         {

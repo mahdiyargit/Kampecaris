@@ -5,20 +5,18 @@ using Grasshopper.Parameters.Standard;
 using Grasshopper.Types.Fields;
 using Grasshopper.Types.Fields.Standard;
 using Grasshopper.UI;
-using Grasshopper.UI.Icon;
 using GrasshopperIO;
-using Kampecaris.Properties;
 using Rhino.Geometry;
 
 namespace Kampecaris.Voxel;
 [IoId("DBF481C5-CFC5-4066-9B9A-47FDFAD90A84")]
-public sealed class MarchingCubes : ComponentWithPins
+public sealed class MarchingCubesComponent : Component, IPinCushion
 {
     public enum Method { Cube, Tetrahedra }
-    public MarchingCubes() : base(new Nomen("Marching Cubes", "Marching Cubes", "Kampecaris", "Voxel"))
+    public MarchingCubesComponent() : base(new Nomen("Marching Cubes", "Marching Cubes", "Kampecaris", "Voxel"))
     {
     }
-    public MarchingCubes(IReader reader) : base(reader)
+    public MarchingCubesComponent(IReader reader) : base(reader)
     {
     }
     protected override void AddInputs(InputAdder inputs)
@@ -29,14 +27,13 @@ public sealed class MarchingCubes : ComponentWithPins
         inputs.AddInteger("Z Count", "Z", "Resolution in z direction.").Set(20);
         inputs.AddField("Field", "Fl", "Field to evaluate.").Set(new SimplexScalarField(0.0, 1.0, 7.0));
         inputs.AddNumber("Target", "Tr", "Optional scalar target. if omitted, the center value of the domain will be picked.", requirement: Requirement.MayBeMissing);
-        inputs.AddYesNo("Close", "Cl", "Close voxel data").Set(false);
+        inputs.AddBoolean("Close", "Cl", "Close voxel data").Set(false);
         inputs.AddInteger("Method", "M", "Method").SetEnum(new Method[1]);
-        inputs.AddYesNo("Calculate Normal", "Cn", "Calculate Normal.").Set(true);
+        inputs.AddBoolean("Calculate Normal", "Cn", "Calculate Normal.").Set(true);
         inputs[0].Preview = ObjectPreview.Hidden;
     }
     protected override void AddOutputs(OutputAdder outputs) => outputs.AddMesh("Mesh", "Ms", "Mesh");
-    protected override IIcon IconInternal => AbstractIcon.FromStream(new MemoryStream(Resources.MarchingCubes));
-    public override IEnumerable<Guid> SupportedPins
+    public IEnumerable<Guid> SupportedPins
     {
         get { yield return AbsoluteTolerancePin.Id; }
     }

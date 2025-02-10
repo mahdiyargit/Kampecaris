@@ -6,37 +6,34 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+	    <PropertyGroup>
+    <!-- Specifies information for Assembly, Yak, and GH2 PlugIn Info -->
+    <Version>1.1.0</Version>
+    <Title>Kampecaris</Title>
+    <Company>Mahdiyar</Company>
+    <Description>Kampecaris is an ongoing project, primarily focused on exploring voxel-based 3D modeling</Description>
+  </PropertyGroup>
+	
+	<ItemGroup>
+		<EmbeddedResource Include="Icons\*.ghicon" />
+		<EmbeddedResource Include="Icons\*.ico" />
+	</ItemGroup>
+
   <ItemGroup>
     <Reference Include="Grasshopper2">
-      <HintPath>..\..\..\..\AppData\Roaming\McNeel\Rhinoceros\packages\8.0\Grasshopper2\2.0.8715-wip.22923\Grasshopper2.dll</HintPath>
+      <HintPath>..\..\..\..\AppData\Roaming\McNeel\Rhinoceros\packages\8.0\Grasshopper2\2.0.9040-wip.38379+b5994c78bcff7d30070103a97d764f79221247af\Grasshopper2.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="GrasshopperIO">
-      <HintPath>..\..\..\..\AppData\Roaming\McNeel\Rhinoceros\packages\8.0\Grasshopper2\2.0.8715-wip.22923\GrasshopperIO.dll</HintPath>
+      <HintPath>..\..\..\..\AppData\Roaming\McNeel\Rhinoceros\packages\8.0\Grasshopper2\2.0.9040-wip.38379+b5994c78bcff7d30070103a97d764f79221247af\GrasshopperIO.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="RhinoCommon">
       <HintPath>..\..\..\..\..\..\Program Files\Rhino 8\System\RhinoCommon.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="Copy &quot;$(TargetPath)&quot; &quot;C:\Users\mahdi\AppData\Roaming\McNeel\Rhinoceros\packages\8.0\Grasshopper2\2.0.8715-wip.22923\Components\$(AssemblyName).rhp&quot;" />
-  </Target>
-
+	<Target Name="RenameOutput" AfterTargets="Build">
+		<Exec Command="move /Y &quot;$(OutDir)$(TargetName).dll&quot; &quot;$(OutDir)$(TargetName).rhp&quot;" />
+	</Target>
 </Project>
