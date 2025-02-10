@@ -11,7 +11,7 @@ Follow these steps to install **Kampecaris**:
 
 3. Open Rhino and run the **G2PluginViewer** command.
 
-   ![G2PluginViewer](![Screenshot-2025-02-10-110551](https://github.com/user-attachments/assets/ab97e9b0-57fa-4209-9581-9e58e92f61f7)
+   ![G2PluginViewer](https://github.com/user-attachments/assets/e4443870-b998-457a-80ed-234ae0b93872)
 
 4. Click the **Install** button, navigate to the **Kampecaris.rhp** file, and select it.
 
