@@ -1,21 +1,24 @@
-![KampecarisLogo](https://github.com/mahdiyargit/Kampecaris/assets/15168602/7c6621d8-0943-47a8-8268-c6e2162ac4ee)
+![Kampecaris Logo](https://github.com/mahdiyargit/Kampecaris/assets/15168602/7c6621d8-0943-47a8-8268-c6e2162ac4ee)
 
 # Installation
-1.	Begin by downloading the **Kampecaris.rhp** file from the [release page](https://github.com/mahdiyargit/Kampecaris/releases/tag/v1.0.0-alpha)
-2.	Once downloaded, ensure that the file is unblocked.
 
-  	  ![Unblock](https://github.com/mahdiyargit/Kampecaris/assets/15168602/da26e6f1-3cdf-44e3-bb4d-5ea8ebb161ad)
+Follow these steps to install **Kampecaris**:
 
-4.	Launch Rhino application and execute the **Plugin** Command. In the search bar, type **Grasshopper2** and select **details**.
+1. Download the **Kampecaris.rhp** file from the [release page](https://github.com/mahdiyargit/Kampecaris/releases/tag/v2.0.0-alpha).
+2. After downloading, ensure the file is unblocked.
 
-  	  ![Plugin](https://github.com/mahdiyargit/Kampecaris/assets/15168602/a33f2c3d-fe51-4179-bae4-1c756598b7a3)
+   ![Unblock](https://github.com/mahdiyargit/Kampecaris/assets/15168602/da26e6f1-3cdf-44e3-bb4d-5ea8ebb161ad)
 
-6.	In the Technical Information section, you'll find a link directing you to the Grasshopper2 installation folder. Click on this link.
+3. Open Rhino and run the **G2PluginViewer** command.
 
-  	  ![PluginProperties](https://github.com/mahdiyargit/Kampecaris/assets/15168602/1e3422c6-1a72-4388-8fd0-8d3b5e499208)
+   ![G2PluginViewer](https://github.com/user-attachments/assets/e4443870-b998-457a-80ed-234ae0b93872)
 
-5.	Navigate to the **Components** folder within the installation directory and paste the **Kampecaris.rhp** file into this folder.
+4. Click the **Install** button, navigate to the **Kampecaris.rhp** file, and select it.
 
-# Participants:
-Mehrnoush Nabizadeh, Mohmmad Ali Khafaji, Azita Partovi, Amirreza Masaeli, Sarvnaz Rahimi Danesh, Hosein Nasiri, Fatemeh Mohammadian Dastjerdi, Koosha Abdolahifar, Nadia Ashrafi, Mohammad Pourfouladi, Niloofar Shoaebargh, Masood Heydarpour, Zahra Shirzadnia, Amir Ahad Sanei, Katayoon Moslemi, Taha Ghasemi, Atoosa Sarrafi, Matin Kabiri, Sogand Malekloo, Alireza Bahrami,
-Setareh Nikfar, Zahra Farahani, Mohammad Savei, Arezo Moslehi, Elham Ghaderi
+---
+
+# Participants
+
+The following individuals contributed to this project:
+
+**Mehrnoush Nabizadeh, Mohmmad Ali Khafaji, Azita Partovi, Amirreza Masaeli, Sarvnaz Rahimi Danesh, Hosein Nasiri, Fatemeh Mohammadian Dastjerdi, Koosha Abdolahifar, Nadia Ashrafi, Mohammad Pourfouladi, Niloofar Shoaebargh, Masood Heydarpour, Zahra Shirzadnia, Amir Ahad Sanei, Katayoon Moslemi, Taha Ghasemi, Atoosa Sarrafi, Matin Kabiri, Sogand Malekloo, Alireza Bahrami, Setareh Nikfar, Zahra Farahani, Mohammad Savei, Arezo Moslehi, Elham Ghaderi.**
