@@ -1,11 +1,17 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
-using Grasshopper.Components;
-using Grasshopper.Data;
-using Grasshopper.Doc;
-using Grasshopper.Parameters;
-using Grasshopper.Types.Fields;
-using Grasshopper.UI;
+using Grasshopper2.Components;
+using Grasshopper2.Data;
+using Grasshopper2.Doc;
+using Grasshopper2.Parameters;
+using Grasshopper2.Types.Fields;
+using Grasshopper2.UI;
+using Grasshopper2.Components;
+using Grasshopper2.Data;
+using Grasshopper2.Doc;
+using Grasshopper2.Parameters;
+using Grasshopper2.UI;
 using GrasshopperIO;
 using GrasshopperIO.DataBase;
 using Rhino.Geometry;
@@ -75,8 +81,8 @@ public sealed class FieldEndComponent : Component
         }
         var root = Node.Create("Document");
         Document.Store(root, FileContents.Small);
-        var bytes = IO.WriteNodeToByteArray(root);
-        var reader = IO.ReadNodeFromByteArray(bytes);
+        var bytes = IO.WriteNodeToByteArray(root, null);
+        var reader = IO.ReadNodeFromByteArray(bytes, null);
         _document = new Document(reader);
         var fieldStart = (FieldStartComponent)_document.Objects.Find(startComp.InstanceId);
         var fieldEnd = (FieldEndComponent)_document.Objects.Find(InstanceId);

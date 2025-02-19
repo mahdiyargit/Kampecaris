@@ -1,10 +1,10 @@
-﻿using Grasshopper.Components;
-using Grasshopper.Doc;
-using Grasshopper.Parameters;
-using Grasshopper.Parameters.Standard;
-using Grasshopper.Types.Fields;
-using Grasshopper.Types.Fields.Standard;
-using Grasshopper.UI;
+﻿using Grasshopper2.Components;
+using Grasshopper2.Doc;
+using Grasshopper2.Parameters;
+using Grasshopper2.Parameters.Standard;
+using Grasshopper2.Types.Fields;
+using Grasshopper2.Types.Fields.Standard;
+using Grasshopper2.UI;
 using GrasshopperIO;
 using Rhino.Geometry;
 
@@ -30,7 +30,7 @@ public sealed class MarchingCubesComponent : Component, IPinCushion
         inputs.AddBoolean("Close", "Cl", "Close voxel data").Set(false);
         inputs.AddInteger("Method", "M", "Method").SetEnum(new Method[1]);
         inputs.AddBoolean("Calculate Normal", "Cn", "Calculate Normal.").Set(true);
-        inputs[0].Preview = ObjectPreview.Hidden;
+        inputs[0].Display = ObjectDisplay.Hidden;
     }
     protected override void AddOutputs(OutputAdder outputs) => outputs.AddMesh("Mesh", "Ms", "Mesh");
     public IEnumerable<Guid> SupportedPins

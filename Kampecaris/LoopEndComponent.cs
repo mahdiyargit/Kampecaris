@@ -1,13 +1,13 @@
-﻿using Grasshopper.Components;
-using Grasshopper.Data;
-using Grasshopper.Doc;
-using Grasshopper.Extensions;
-using Grasshopper.Parameters;
-using Grasshopper.Parameters.Standard;
-using Grasshopper.UI;
-using Grasshopper.UI.Icon;
-using Grasshopper.UI.InputPanel;
-using Grasshopper.UI.Toolbar;
+﻿using Grasshopper2.Components;
+using Grasshopper2.Data;
+using Grasshopper2.Doc;
+using Grasshopper2.Extensions;
+using Grasshopper2.Parameters;
+using Grasshopper2.Parameters.Standard;
+using Grasshopper2.UI;
+using Grasshopper2.UI.Icon;
+using Grasshopper2.UI.InputPanel;
+using Grasshopper2.UI.Toolbar;
 using GrasshopperIO;
 using GrasshopperIO.DataBase;
 
@@ -39,7 +39,7 @@ public class LoopEndComponent : Component
         {
             var nomen = new Nomen("", "", "Record Data", "Record Data");
             var spacer = new Spacer(nomen, 0, 0);
-            var pushOption = new PushOption(StandardIcons.PreviewIcon(),
+            var pushOption = new RadioToggle(StandardIcons.PreviewIcon(),
                 nomen.WithName("RecordData").WithInfo("When enabled, data from each iteration is stores separately."),
                 Record, b => Record = b);
             pushOption.SetSizeLimits(100, 1000);
@@ -181,8 +181,8 @@ public class LoopEndComponent : Component
 
         var root = Node.Create("Document");
         Document.Store(root, FileContents.Small);
-        var bytes = IO.WriteNodeToByteArray(root);
-        var reader = IO.ReadNodeFromByteArray(bytes);
+        var bytes = IO.WriteNodeToByteArray(root, null);
+        var reader = IO.ReadNodeFromByteArray(bytes, null);
         var document = new Document(reader);
         var loopStart = (LoopStartComponent)document.Objects.Find(startComp.InstanceId);
         var loopEnd = (LoopEndComponent)document.Objects.Find(InstanceId);

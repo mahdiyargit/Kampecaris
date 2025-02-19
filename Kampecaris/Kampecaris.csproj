@@ -18,21 +18,21 @@
 		<EmbeddedResource Include="Icons\*.ghicon" />
 		<EmbeddedResource Include="Icons\*.ico" />
 	</ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Grasshopper2">
-      <HintPath>..\..\..\..\AppData\Roaming\McNeel\Rhinoceros\packages\8.0\Grasshopper2\2.0.9040-wip.38379+b5994c78bcff7d30070103a97d764f79221247af\Grasshopper2.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="GrasshopperIO">
-      <HintPath>..\..\..\..\AppData\Roaming\McNeel\Rhinoceros\packages\8.0\Grasshopper2\2.0.9040-wip.38379+b5994c78bcff7d30070103a97d764f79221247af\GrasshopperIO.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="RhinoCommon">
-      <HintPath>..\..\..\..\..\..\Program Files\Rhino 8\System\RhinoCommon.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-  </ItemGroup>
+	
+	<ItemGroup>
+	  <Reference Include="Grasshopper2">
+	    <HintPath>..\..\..\..\AppData\Roaming\McNeel\Rhinoceros\packages\8.0\Grasshopper2\2.0.9180-wip.26301\net7.0\Grasshopper2.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="GrasshopperIO">
+	    <HintPath>..\..\..\..\AppData\Roaming\McNeel\Rhinoceros\packages\8.0\Grasshopper2\2.0.9180-wip.26301\net7.0\GrasshopperIO.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="RhinoCommon">
+	    <HintPath>..\..\..\..\..\..\Program Files\Rhino 8\System\RhinoCommon.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	</ItemGroup>
 	<Target Name="RenameOutput" AfterTargets="Build">
 		<Exec Command="move /Y &quot;$(OutDir)$(TargetName).dll&quot; &quot;$(OutDir)$(TargetName).rhp&quot;" />
 	</Target>
